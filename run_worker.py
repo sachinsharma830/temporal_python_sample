@@ -30,7 +30,7 @@ async def main():
                 task_queue="my-task-queue",
                 workflows=[IPAddress, SayHello],
                 activities=[get_ip_address, say_hello],
-                activity_executor=activity_executor,
+                activity_executor=activity_executor
             )
             await worker.run()
         logger.info("Worker stopped")
